@@ -25,7 +25,7 @@ public class BookController {
     @ApiImplicitParam(name = "book", value = "图书详细实体", required = true, dataType = "Book")
     @RequestMapping(value="", method=RequestMethod.POST)
     public String postBook(@RequestBody Book book) {
-//        books.put(book.getId(), book);
+        books.put((long) book.getId(), book);
         return "success";
     }
 
